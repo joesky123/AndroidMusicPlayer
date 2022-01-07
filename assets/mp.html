@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Music Player Interface</title>
+    <link rel="stylesheet" href="css/mp.css"> 
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> 
+</head>
+<body>
+    <audio id="audio" src="" autoplay display="none"></audio>
+	<div class="container">
+	    <div class="header">
+        <div class="audio-wrapper">
+            <div class="audio-left">
+                <i id="musicPlay" class="fa fa-play-circle"></i>
+				<i id="openFile" class="fa fa-folder"></i>
+				<i id="mp3List" class="fa fa-navicon"></i>
+				<i id="volM" class="fa fa-volume-down"></i>
+				<i id="Volume" class="fa fa-volume-off"></i>
+				<i id="volP" class="fa fa-volume-up"></i>
+				<i id="Help" class="fa fa-question-circle"></i>
+            </div>
+            <div class="audio-info">
+                <div style="max-width: 5.36rem;" id="music_name"></div>
+                <div class="progress-bar-bg" id="progressBarBg">
+			        <span id="progressDot"></span>
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="audio-time">
+			        <span class="audio-length-current" id="audioCurTime">00:00</span>
+					<span class="audio-length-sp">&nbsp;/&nbsp;</span>
+				    <span class="audio-length-total">00:00</span>
+					<span class="vol"></span>
+			    </div>	
+            </div>
+        </div>
+		</div>
+		<div class="body">
+		    <div class="aplayer-lrc"> 
+                 <ul id="lrclist" class="aplayer-lrc-contents" style="transform: translateY(0px);">
+	             </ul> 
+            </div>
+		    <div class="list"></div>
+		</div>
+		<div class="footer"></div>
+	</div>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.nicescroll/3.7.6/jquery.nicescroll.js"></script>
+<script src="js/lrc.js"></script>
+<script src="js/play.js"></script>
+<script>
+    $(document).ready(function () {
+		window.onload = function () {
+		    getRem(750, 100)
+		};
+		window.onresize = function () {
+		    getRem(750, 100)
+		};
+		function getRem(pwidth, prem) {
+		    var html = document.getElementsByTagName("html")[0];
+		    var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+		    html.style.fontSize = oWidth / pwidth * prem + "px";
+		}
+    });
+</script>
+</body>
+</html>

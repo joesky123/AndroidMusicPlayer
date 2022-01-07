@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:fitsSystemWindows="true"
+	android:background="@drawable/my_background"
+	android:gravity="center"
+	android:padding="10dp">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:text="说明"
+		android:textColor="#FFFFFF"
+		android:layout_marginTop="10dp"
+		android:layout_gravity="center"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="打开SD卡上的一首音乐进行播放，同目录歌曲会自动生成播放列表；"
+		android:layout_width="match_parent"
+		android:textColor="#ffffff"
+		android:textIsSelectable="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:padding="10dp"
+		android:paddingBottom="0dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="自动随机播放；"
+		android:layout_width="match_parent"
+		android:textColor="#ffffff"
+		android:textIsSelectable="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:padding="10dp"
+		android:paddingBottom="0dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="将同名lrc歌词文件与mp3音乐文件放在同一目录，播放时会自动关联；"
+		android:layout_width="match_parent"
+		android:textColor="#ffffff"
+		android:textIsSelectable="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:padding="10dp"
+		android:paddingBottom="0dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="点击列表按钮切换播放列表或滚动歌词"
+		android:layout_width="match_parent"
+		android:textColor="#ffffff"
+		android:textIsSelectable="true"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:padding="10dp"
+		android:paddingBottom="0dp"/>
+
+	<ImageView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:src="@drawable/irobot"
+		android:layout_marginTop="0dp"/>
+
+</LinearLayout>
+
